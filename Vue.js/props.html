@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="https://unpkg.com/vue@next"></script>
+    </head>
+    <body>
+        <div id="app1">
+            <ul>
+                <template1 prop1="Next"></template1>
+                <template1 prop1="Back"></template1>
+            </ul>
+        </div>
+
+        <script>
+            const App1 = {}
+
+            const app = Vue.createApp(App1)
+
+            app.component('template1', {
+                props: ['prop1'],
+                template: `
+                    <button> {{ prop1 }}</button>
+                    <br>
+                `
+            })
+
+            app.mount('#app1')
+        </script>
+    </body>
+</html>

@@ -2,27 +2,23 @@
     <head>
         <meta charset="utf-8">
         <script src="https://unpkg.com/vue@next"></script>
+        <link rel="stylesheet" type="text/css" href="v-bind.css">
     </head>
     <body>
         <div id="app1">
-            Password: 
-            <span v-if="password">12345</span>
-            <br>
-            <button v-on:click="off">Show less</button>
+            <p v-bind:class="class1">You Died</p>
+
+            <!--省略記法-->
+            <p :class="class1">You Died</p>
         </div>
 
         <script>
             const App1 = {
                 data() {
                     return {
-                        password: true
+                        class1 : "blue"
                     }
                 },
-                methods: {
-                    off: function() {
-                        this.password = false
-                    }
-                }
             }
 
             app1 = Vue.createApp(App1)

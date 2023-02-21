@@ -5,22 +5,20 @@
     </head>
     <body>
         <div id="app1">
-            Password: 
-            <span v-if="password">12345</span>
-            <br>
-            <button v-on:click="off">Show less</button>
+            <h1>{{ count }}回クリックしました</h1>
+            <button v-on:click="increment">カウントを増やす</button>
         </div>
 
         <script>
             const App1 = {
                 data() {
                     return {
-                        password: true
+                        count: 0
                     }
                 },
                 methods: {
-                    off: function() {
-                        this.password = false
+                    increment: function() {
+                        this.count += 1
                     }
                 }
             }

@@ -6,20 +6,27 @@
     <body>
         <div id="app1">
             <ul>
-                <template1></template1>
-                <template1></template1>
-                <template1></template1>
+                <template1 prop1="Next"></template1>
+                <!--動的-->
+                <template1 :prop1="varString"></template1>
             </ul>
         </div>
 
         <script>
-            const App1 = {}
+            const App1 = {
+                data() {
+                    return {
+                        varString : "Message is Here."
+                    }
+                }
+            }
 
             const app = Vue.createApp(App1)
 
             app.component('template1', {
+                props: ['prop1'],
                 template: `
-                    <button> ??? </button>
+                    <button> {{ prop1 }}</button>
                     <br>
                 `
             })

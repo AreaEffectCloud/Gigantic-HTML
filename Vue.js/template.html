@@ -5,24 +5,20 @@
     </head>
     <body>
         <div id="app1">
-            Password: 
-            <span v-if="password">12345</span>
-            <br>
-            <button v-on:click="off">Show less</button>
+            app1: {{ message }}
+        </div>
+        <div id="app2">
+            <!--mount で指定されていない為、値が変更されない-->
+            app2: {{ message }}
         </div>
 
         <script>
             const App1 = {
                 data() {
                     return {
-                        password: true
+                        message: "This message is deleted...???"
                     }
                 },
-                methods: {
-                    off: function() {
-                        this.password = false
-                    }
-                }
             }
 
             app1 = Vue.createApp(App1)
