@@ -4,23 +4,31 @@
         <script src="https://unpkg.com/vue@next"></script>
     </head>
     <body>
+        <style>
+            .ques {
+                font-size: 20;
+            }
+        </style>
+
         <div id="app1">
-            Password: 
-            <span v-if="password">12345</span>
-            <br>
-            <button v-on:click="off">Show less</button>
+            <p class="ques">
+                No.1 : <u>顰蹙</u>を買う
+                <br>
+                <button v-on:click="off">Show</button>
+                <span v-if="answer"> ひんしゅく</span>
+            </p>
         </div>
 
         <script>
             const App1 = {
                 data() {
                     return {
-                        password: true
+                        answer: false
                     }
                 },
                 methods: {
                     off: function() {
-                        this.password = false
+                        this.answer = true
                     }
                 }
             }

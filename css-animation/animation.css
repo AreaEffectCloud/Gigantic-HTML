@@ -11,7 +11,6 @@
     animation-direction:normal;
     }
     
-    /*1で解説*/
     @keyframes fadeInAnime{
       0% {
         opacity: 0;
@@ -21,10 +20,6 @@
         opacity: 1;
       }
     }
-
-/*==================================================
-ふわっ
-===================================*/
 
 .fadeUp {
     animation-name: fadeUpAnime;/*アニメーションの定義名*/
